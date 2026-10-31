@@ -1,0 +1,271 @@
+html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>57. Alay - RP Grand Mobil</title>
+    <style>
+        / GENEL AYARLAR /
+        :root {
+            --primary-color: #4b5320; / Ordu Yeşili /
+            --secondary-color: #f4a460; / Kum Rengi /
+            --dark-bg: #1a1a1a;
+            --text-color: #ffffff;
+            --card-bg: #2e2e2e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        / HEADER & NAVİGASYON /
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 4px solid var(--secondary-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        / ANA İÇERİK ALANI /
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        / HERO (KARŞILAMA) ALANI /
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/800x400/4b5320/ffffff?text=57.+ALAY+RP');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 2px solid var(--secondary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #d4884d;
+            transform: scale(1.05);
+        }
+
+        / KARTLAR (Etkinlikler vb.) /
+        .section-title {
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 10px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .tag {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        / FORM /
+        form {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            box-sizing: border-box; / Önemli: taşmayı önler /
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>57. ALAY</h1>
+        <div class="subtitle">Grand Mobil RP Topluluğu</div>
+        <nav>
+            <a href="#anasayfa">Ana Sayfa</a>
+            <a href="#etkinlikler">Etkinlikler</a>
+            <a href="#katilim">Katılım Formu</a>
+        </nav>
+    </header>
+
+    <div class="container" id="anasayfa">
+        <!-- Karşılama Alanı -->
+        <div class="hero">
+            <h2>Tekrar Görev Başlıyor!</h2>
+            <p>Ailemize hoş geldiniz. Hava durumu açık, moral yüksek. Birlikte hareket edeceğiz.</p>
+            <a href="#katilim" class="btn">Hemen Katıl</a>
+        </div>
+
+        <!-- Etkinlikler Bölümü -->
+        <h2 class="section-title" id="etkinlikler">Yaklaşan Aile & Alay Etkinlikleri</h2>
+        
+        <div class="grid">
+            <!-- Kart 1 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/300x150/556b2f/ffffff?text=Aile+Toplantisi" alt="Toplantı">
+                <div class="card-content">
+                    <span class="tag">TOPLANTI</span>
+                    <h3>Aile Toplantısı</h3>
+                    <p>Haftalık planlamalar ve yeni üyelerin tanışması. Saat: 20:00</p>
+                </div>
+            </div>
+
+            <!-- Kart 2 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/300x150/8b4513/ffffff?text=Ortak+Operasyon" alt="Operasyon">
+                <div class="card-content">
+                    <span class="tag">RP OPERASYONU</span>
+                    <h3>Kızılötesi Operasyon</h3>
+                    <p>Tüm alana açık büyük operasyon. Hazırlıklarınızı yapın.</p>
+                </div>
+            </div>
+
+            <!-- Kart 3 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/300x150/4682b4/ffffff?text=Yemek+Eğlencesi" alt="Yemek">
+                <div class="card-content">
+                    <span class="tag">SOSYAL</span>
+                    <h3>Serdar'ın Yeri</h3>
+                    <p>Rutin yemek etkinliği ve sohbet. Herkes davetlidir.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Katılım Formu -->
+        <h2 class="section-title" id="katilim">Göreve Katılım Formu</h2>
+        <form action="#" method="post">
+            <label>Rütbeniz / Takım Adınız</label>
+            <input type="text" placeholder="Örn: Çavuş Serdar" required>
+
+            <label>Etkinlik Türü</label>
+            <select>
+                <option>Toplantı</option>
+                <option>Operasyon</option>
+                <option>Yemek</option>
+                <option>Diger</option>
+            </select>
+
+            <label>Mesajınız</label>
+            <textarea rows="4" placeholder="Not düşmek isterseniz buraya yazabilirsiniz..."></textarea>
+
+            <button type="submit">Gönder</button>
+        </form>
+    </div>
+
+    <footer>
+        © 2024 57. Alay Grand Mobil - Mini Log Robot Tasarımı
+    </footer>
+
+</body>
+</html>
+
+
